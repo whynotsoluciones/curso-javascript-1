@@ -8,8 +8,6 @@ var winston = require('winston');
 // Tabla de compatibilidad Navegadores: http://kangax.github.io/es5-compat-table/
 delete Array.prototype.forEach;
 
-//var cons = console; // WTF !!
-
 // Nos lo definimos nosotros
 Array.prototype.forEach = function (callback) {
     if (callback) {
@@ -25,5 +23,3 @@ people.forEach(function (el) {
     //console.log('Hola ' + el);
     winston.info('Hola ' + el);
 });
-
-console.log('hola');
