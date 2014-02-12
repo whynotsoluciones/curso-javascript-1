@@ -16,4 +16,4 @@ function HolaMundo() {
 
 // El operador new nos permite convertir cualquier función en un constructor 
 var myObject = new HolaMundo();
-    myObject.method(); 
+myObject.method();

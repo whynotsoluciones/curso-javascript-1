@@ -3,13 +3,13 @@
 //
 var myPrototype = {
     prop: 'Hola mundo',
-    method: function() {
+    method: function () {
         console.log(this.prop);
     }
-}   
+};
 
 // Seleccionamos el objeto anterior como prototipo de nuestro nuevo constructor
-var Constructor = function () {}
+var Constructor = function () {};
 Constructor.prototype = myPrototype;
 
 // Creamos nuestro nuevo objeto
@@ -34,14 +34,14 @@ myObject.method();
 myObject2.method();
 debugger;
 
-myObject2.method = function() {
+myObject2.method = function () {
     console.log('Cambio del método en el objeto myObject2');
-}
+};
 
 // Si cambiamos el método en el prototipo, cambiará en aquellos objetos que no hayan modificado el método
-myPrototype.method = function() {
+myPrototype.method = function () {
     console.log('Cambio del método en el prototipo');
-}
+};
 
 myObject.method();
 myObject2.method();

@@ -11,17 +11,17 @@ delete Array.prototype.forEach;
 //var cons = console; // WTF !!
 
 // Nos lo definimos nosotros
-Array.prototype.forEach = function(callback) {
+Array.prototype.forEach = function (callback) {
     if (callback) {
         for (var i = 0; i < this.length; i++) {
             callback(this[i]);
         }
     }
-}
+};
 
 var sal = '';
 var people = ['Josué', 'Laura', 'Alex', 'Matto', 'Diego', 'Javi', 'Eze'];
-people.forEach(function(el) {
+people.forEach(function (el) {
     //console.log('Hola ' + el);
     winston.info('Hola ' + el);
 });

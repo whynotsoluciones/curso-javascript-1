@@ -4,9 +4,9 @@
  * de Object para ahorrarnos un poco de trabajo
  */
 if (typeof Object.create !== 'function') {
-    Object.create = function(o) {
+    Object.create = function (o) {
         // Constructor
-        var C = function() {};
+        var C = function () {};
         C.prototype = o;
         return new C();
     }
@@ -21,7 +21,7 @@ function inspect(o) {
     var type = '';
     // Con la sentencia 'in' podemos iterar sobre los miembros de un objeto
     for (pName in o) {
-        type = (typeof o[pName] !== 'function')?'Propiedad':'Función';
+        type = (typeof o[pName] !== 'function') ? 'Propiedad' : 'Función';
         if (o.hasOwnProperty(pName)) {
             console.log(type + ' propia ' + pName + ':' + o[pName]);
         } else {
@@ -32,7 +32,7 @@ function inspect(o) {
 
 var obj1 = {
     prop: 'Prototipo 1',
-    method: function() {
+    method: function () {
         console.log(this.prop);
     }
 };
@@ -53,4 +53,3 @@ inspect(obj2);
 debugger;
 
 inspect(obj3);
-

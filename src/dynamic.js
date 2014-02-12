@@ -11,11 +11,10 @@ console.log('Valor: ' + obj.prop + ' Tipo: ' + typeof obj.prop);
 debugger;
 
 // Podemos asignarle null
-obj.prop = null; 
+obj.prop = null;
 console.log('Valor: ' + obj.prop + ' Tipo: ' + typeof obj.prop);
 debugger;
 
 // Podemos eliminar la propiedad
 delete obj.prop;
 console.log('Valor: ' + obj.prop + ' Tipo: ' + typeof obj.prop);
-

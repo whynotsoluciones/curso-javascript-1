@@ -1,21 +1,21 @@
 /**
  * Declaramos una función que crea objetos
  */
-var factory = function() {
+var factory = function () {
 
     var privateAttribute = 'Privado';
-    var privateMethod = function() {
+    var privateMethod = function () {
         console.log(privateAttribute);
     };
 
     return {
-        get: function() {
+        get: function () {
             return privateAttribute;
         },
-        set: function(val) {
-            privateAttribute = val; 
+        set: function (val) {
+            privateAttribute = val;
         },
-        print: function() {
+        print: function () {
             privateMethod();
         }
     };
@@ -41,4 +41,3 @@ debugger;
 // Creamos otro objeto con nuestro 'Factory'
 var obj2 = factory();
 obj2.print();
-
